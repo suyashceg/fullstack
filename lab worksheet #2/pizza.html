@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PizzaCorner</title>
+    <script src="pizzalogic.js"></script>
+</head>
+<body>
+    <h1>PizzaCorner</h1>
+    <img src="https://cdn1.vectorstock.com/i/1000x1000/61/00/pizza-corner-logo-design-vector-37306100.jpg" width="200" height="150"> 
+    <div>
+        <form>
+            <div style="padding:25px; font-family: sans-serif;">
+                <label>Select size of your pizza: &nbsp</label>
+                <select id="size">
+                    <option value="1">Small</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Large</option>
+                </select>   
+            </div>
+            <div style="padding:25px; font-family: sans-serif;">
+                <label>Deep pan?: &nbsp</label>
+                <select id="deeppan">
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                    
+                </select> 
+            </div>
+            <div style="padding:25px; font-family: sans-serif;">
+                <label>Would you like to have extra toppings?: &nbsp</label>
+                <select id="topping">
+                    <option value="1">No</option>
+                    <option value="2">mushrooms</option>
+                    <option value="3">fingernail</option>
+                    <option value="4">spicy chicken</option>
+                    <option value="5">olive</option>
+                    
+                </select> 
+            </div>
+            <div style="padding:25px; font-family: sans-serif;">
+                <label>Do you want food to be home delivered?: &nbsp</label>
+                <select id="home">
+                    <option value="1">Yes</option>
+                    <option value="2">No</option>
+                </select> 
+            </div>
+            
+            <div style="padding:25px;">
+                <button type="button" onclick="calculate()">Total</button>
+                
+            </div>
+            <p id="result" style="padding:25px"></p>
+        </form>
+    </div>
+</body>
+</html>

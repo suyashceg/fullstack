@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th, td {
+        border: 1px solid black;
+        min-width: 50px;
+        }
+        table{
+            background-color: rgb(238, 235, 235);
+        }
+        table td{
+            color:red;
+        }
+        #b{
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Electricity bill Calculator</h1>
+    <label>Enter the consumed units: </label><input type="number" id="units">
+    <button type="button" onclick="calcbill()">Submit</button>
+    <div id="d1"></div>
+    <div style="padding:20px"></div>
+    <table style="margin:20px">
+        <tr>
+            <td id="b">Consumed Units</td>
+            <td id="col1"></td>
+        </tr>
+        <tr>
+            <td id="b">Total current charges rs.</td>
+            <td id="col2"></td>
+        </tr>
+        <tr>
+            <td id="b">current charges rs.</td>
+            <td id="col3"></td>
+        </tr>
+        <tr>
+            <td id="b">fixed cost rs.</td>
+            <td id="col4"></td>
+        </tr>
+        <tr>
+            <td id="b">subsidy cost rs.</td>
+            <td id="col5"></td>
+        </tr>
+        <tr>
+            <td id="b">new subsidy rs.</td>
+            <td id="col6"></td>
+        </tr>
+        <tr>
+            <td id="b">net amount rs.</td>
+            <td id="col7"></td>
+        </tr>
+
+    </table>
+</body>
+<script>
+    
+    function calcbill()
+    {
+        let units = document.getElementById("units").value;
+        let div = document.getElementById("d1");
+        let charges = 0;
+        let fixcost = 50;
+        let subsidy = 250;
+        function myfunc()
+        {
+            return 0;
+        }
+        function myfunc1(units)
+        {
+            
+                var diff1 = units-150;
+                if(diff1>0)
+                    return 100+diff1*3.75;
+                else
+                    return 100;
+            
+        }
+        function myfunc2(units)
+        {
+            var res = myfunc1(200);
+            var diff = units-350;
+            if(diff>0)
+                return res+250+4*diff;
+            else
+                return 250+res;
+        }
+        function myfunc3(units)
+        {
+            var res1 = myfunc1(200);
+            var res2 = myfunc2(200);
+            var diff = units-450;
+            if(diff>0)
+                return res1+res2+diff*4.25+300;
+            else
+                return res1+res2+300;
+        }
+        function myfunc4(units)
+        {
+            var res1 = myfunc1(200);
+            var res2 = myfunc2(200);
+            var res3 = myfunc3(200);
+            var diff = units-600;
+            return diff*5+res1+res2+res3;
+        }
+        if(units==0)
+        {
+            charges = 0;
+        }
+        else if(units>100 && units<201)
+        {
+            
+            charges+=myfunc1(units);
+        }
+        else if(units>200 && units<401)
+        {
+            charges+=myfunc2(units);
+        }
+        else if(units>400 && units<601)
+        {
+            charges+=myfunc3(units);
+        }
+        else if(units>600)
+        {
+            charges+=myfunc4(units);
+        }
+        let ncharge=0;
+        if(charges-250<0)
+            ncharge=0;
+        else
+            ncharge=charges-250
+
+        document.getElementById("col1").innerHTML = units;
+        document.getElementById("col2").innerHTML = charges;
+        document.getElementById("col3").innerHTML = charges;
+        document.getElementById("col4").innerHTML = 50;
+        document.getElementById("col5").innerHTML = 0;
+        document.getElementById("col6").innerHTML = 250;
+        document.getElementById("col7").innerHTML = ncharge;
+    }
+
+</script>
+
+</style>
+</html>

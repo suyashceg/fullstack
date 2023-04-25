@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>SpeakSimplified</title>
+    <script src="SpeakSimplified.js"></script>
+
+</head>
+<body>
+    <h1>Speak Simplified</h1>
+    <div style="background-color:aliceblue;padding:25px;">
+        <label>Enter a word: </label>
+        <input type="text" id="t1">
+    </div>
+    <div style="padding:25px">
+        <select id="ops">
+            <option value="1">Exclude</option>
+            <option value="2">Strengthen</option>
+            <option value="3">Emphasize</option>
+        </select>
+    </div>
+    <div style="padding:25px">
+        <button onclick="showresult()">Result</button>
+    </div>
+    <div style="background-color:rgb(219, 228, 235);padding:25px;">
+        <p id="res"></p>
+    </div>
+</body>
+</html>
