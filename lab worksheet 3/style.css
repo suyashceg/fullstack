@@ -1,0 +1,13 @@
+.complete{
+    background-color: green;
+}
+
+.ongoing{
+    background-color:rgb(196, 196, 24);
+}
+
+.upcoming{
+    background-color: red;
+    
+}
+
