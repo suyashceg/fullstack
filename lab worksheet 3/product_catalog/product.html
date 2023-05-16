@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product Catalog</title>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+	<h1>Product Catalog</h1>
+	<div id="form">
+		<label for="name">Name:</label>
+		<input type="text" id="name">
+        <label for="id">id:</label>
+		<input type="text" id="idinp">
+		<label for="price">Price:</label>
+		<input type="number" id="price">
+		<label for="image">Image:</label>
+		<input type="file" id="image">
+		<button id="add-btn">Add to Catalog</button>
+	</div>
+    <div>
+        <input type="text" id="remove-name" placeholder="Enter product id">
+        <button id="remove-button" onclick="myfunc()">Remove Product</button>
+    </div>
+    <div>
+        <h2>Edit product</h2>
+        <input type="text" id="1" placeholder="Enter product id">
+        <input type="text" id="2" placeholder="Enter new name">
+        <input type="text" id="3" placeholder="Enter new price">
+        <button id="remove-button" onclick="myfunc2()">Edit Product</button>
+    </div>
+	<div id="catalog"></div>
+	<script src="script.js"></script>
+</body>
+</html>
